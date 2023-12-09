@@ -37,7 +37,7 @@ const SideBar = () => {
                     </a>
                 </div>
                 <div className="setting">
-                    <a href="">
+                    <a href="/config">
                         <img src={setting} alt="" />
                     </a>
                 </div>

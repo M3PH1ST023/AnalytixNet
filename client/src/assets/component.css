@@ -36,14 +36,13 @@ ul > li {
 }
 .dashboard-container .top-cards {
     display: flex;
-    width: 60vw;
+    width: max-content;
     gap: 2.5%;
     position: absolute;
-    left: 10%;
+    left: 7%;
     top: 10%;
 }
 .box {
-    padding: 0 20px;
     border-radius: 10px;
     width: max-content;
     min-width: 10vw;
@@ -68,6 +67,7 @@ ul > li {
 .box h2 {
     font-weight: bold;
     font-size: 30px;
+    margin: 20px;
 }
 .box p {
     font-weight: bold;
@@ -162,4 +162,50 @@ ul > li {
     font-size: 24px;
     font-weight: bold;
     margin: 12px 0 32px 0;
+}
+.comp-container {
+    position: absolute;
+    left: 7%;
+    top: 10%;
+    color: #03045e;
+}
+.comp-container .os {
+    position: relative;
+    height: 80vh;
+    left: 0;
+}
+/*  */
+table {
+    width: 40vw;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    border-right: 2px solid #001d3d;
+    background-color: #55608f;
+}
+
+tbody tr {
+    background-color: #7485cf;
+    text-align: left;
+}
+td {
+    border-right: 2px solid #001d3d;
+}
+tr:hover {
+    background-color: #cdcdcd;
+}
+td:hover {
+    color: #001d3d;
+    background-color: #cdcdcd46;
 }
