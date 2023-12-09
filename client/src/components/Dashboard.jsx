@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios, { toFormData } from "axios";
-import j from "jquery";
+import j, { error } from "jquery";
 
 const Dashboard = () => {
     const speedCheck = () => {
@@ -43,25 +43,35 @@ const Dashboard = () => {
             document.querySelector(".content").classList.remove("hide");
         }
     };
-
+    const [ip, setIp] = useState([]);
+    useEffect(() => {
+        axios
+            .get("http://127.0.0.1:5000/api/v1/ip")
+            .then((resp) => {
+                setIp(resp.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, []);
     return (
         <div className="dashboard-container">
             <div className="top-cards">
                 <div className="box red">
                     <p>Ip of User</p>
-                    <h2>127.0.0.1</h2>
+                    <h2>ip</h2>
                 </div>
                 <div className="box blue">
                     <p>Hostname of User</p>
-                    <h2>mephisto-82fg</h2>
+                    <h2>{ip.hostname}</h2>
                 </div>
                 <div className="box green">
                     <p>Connection name</p>
-                    <h2>The Boyz</h2>
+                    <h2>{ip.connectionName}</h2>
                 </div>
                 <div className="box yellow">
                     <p>Device MAC</p>
-                    <h2>mac address</h2>
+                    <h2>{ip.macAddress}</h2>
                 </div>
             </div>
             <div className="loader-widget">
