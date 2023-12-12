@@ -39,48 +39,41 @@ ul > li {
 /* config page */
 .comp-container {
     position: absolute;
-    left: 7%;
+    width: 90vw;
+    left: 150px;
     top: 10%;
+    display: flex;
+    justify-content: space-around;
     color: #03045e;
 }
-.comp-container .os {
-    position: relative;
-    height: 80vh;
-    left: 0;
+.comp-container h2 {
+    position: absolute;
+    top: 10px;
 }
-table {
-    width: 40vw;
-    border-collapse: collapse;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+.comp-container > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
-th,
-td {
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-}
-
-th {
-    text-align: left;
-    border-right: 2px solid #001d3d;
-    background-color: #55608f;
-}
-
-tbody tr {
-    background-color: #7485cf;
+.comp-container .os .spec {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
     text-align: left;
 }
-td {
-    border-right: 2px solid #001d3d;
+.comp-container .os .spec:hover {
+    background-color: #012a4a;
+    box-shadow: rgba(36, 240, 255, 0.904) 0px 5px 15px;
+    border-radius: 4px;
+    color: #caf0f8;
 }
-tr:hover {
-    background-color: #cdcdcd;
+.spec .label {
+    width: 40%;
+    font-weight: bold;
 }
-td:hover {
-    color: #001d3d;
-    background-color: #cdcdcd46;
+.spec .detail {
+    width: 60%;
 }
 /* dashboard */
 .dashboard-container {
@@ -106,4 +99,38 @@ td:hover {
     transition: 5ms;
     background-color: #7209b7;
     color: #e0b1cb;
+}
+/* steganography */
+.steg-container {
+    position: absolute;
+    left: 7%;
+    top: 7%;
+    color: #012a4a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    border: 0.5px solid #480ca8;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    width: 25vw;
+    font-size: 20px;
+}
+.inputs {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.steg-file {
+    font-size: 15px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #03045e;
+    color: #caf0f8;
 }

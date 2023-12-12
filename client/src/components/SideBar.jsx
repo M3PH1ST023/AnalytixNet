@@ -22,7 +22,7 @@ const SideBar = () => {
                     </a>
                 </div>
                 <div className="steg">
-                    <a href="">
+                    <a href="/steganography">
                         <img src={steg} alt="stats" />
                     </a>
                 </div>
