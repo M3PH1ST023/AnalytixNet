@@ -6,6 +6,7 @@ import "./assets/component.css";
 import SideBar from "./components/SideBar";
 import Dashboard from "./components/Dashboard";
 import Config from "./components/Config";
+import Steg from "./components/Steg";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/steganography" element={<Steg />} />
                     <Route path="/config" element={<Config />} />
                 </Routes>
             </BrowserRouter>
