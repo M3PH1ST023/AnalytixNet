@@ -1,68 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --color0: #003087;
+    --color1: #0072ce;
+    --color2: #caf0f8;
+    --color3: #ffa07a;
+    --color4: #ff7f50;
+    --color5: #393939;
+    --color6: #fff;
+    --font1: "Orbitron";
+    --font2: "Sofia";
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.main-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: -8px -8px;
 }
-a:hover {
-  color: #535bf2;
+.login-container {
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/login-background.gif");
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.login {
+    width: 55%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+    gap: 5%;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.login div {
+    width: 100%;
+    height: 100%;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.login .logo img {
+    aspect-ratio: 1/1;
+    height: 50vh;
+    border-radius: 100%;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 70%;
 }
